@@ -1,20 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart OJT Tracker</title>
 
-    <link rel="stylesheet" href="style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Smart OJT Tracker</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
 
-    <header>
-        <h1>Smart OJT Tracker</h1>
-        <p>Track your daily OJT progress efficiently</p>
+  <!-- SIDEBAR -->
+
+  <aside class="sidebar">
+
+    <div class="logo">
+      <h2>OJT Tracker</h2>
+    </div>
+
+    <ul class="menu">
+      <li><i class="fa-solid fa-house"></i> Dashboard</li>
+      <li><i class="fa-solid fa-list-check"></i> Tasks</li>
+      <li><i class="fa-solid fa-chart-column"></i> Analytics</li>
+      <li><i class="fa-solid fa-note-sticky"></i> Notes</li>
+      <li><i class="fa-solid fa-gear"></i> Settings</li>
+    </ul>
+
+  </aside>
+
+  <!-- MAIN CONTENT -->
+
+  <main class="main-content">
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+      <div>
+        <h1>Smart OJT Productivity Tracker</h1>
+        <p>Track your learning and daily OJT progress</p>
+      </div>
+
+      <button id="themeToggle">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+
     </header>
 
-    <script src="script.js"></script>
+    <!-- SUMMARY CARDS -->
+
+    <section class="summary-section">
+
+      <div class="summary-card">
+        <h3>Total Tasks</h3>
+        <p id="totalTasks">0</p>
+      </div>
+
+      <div class="summary-card">
+        <h3>Completed</h3>
+        <p id="completedTasks">0</p>
+      </div>
+
+      <div class="summary-card">
+        <h3>Pending</h3>
+        <p id="pendingTasks">0</p>
+      </div>
+
+      <div class="summary-card">
+        <h3>Productivity</h3>
+        <p id="productivity">0%</p>
+      </div>
+
+    </section>
+
+    <!-- TASK FORM -->
+
+    <section class="task-form-container">
+
+      <h2>Add New Task</h2>
+
+      <form id="taskForm">
+
+        <input
+          type="text"
+          id="taskTitle"
+          placeholder="Enter Task Title"
+          required
+        >
+
+        <select id="category">
+
+          <option value="Development">Development</option>
+
+          <option value="Testing">Testing</option>
+
+          <option value="Documentation">Documentation</option>
+
+          <option value="Learning">Learning</option>
+
+        </select>
+
+        <input type="date" id="dueDate">
+
+        <select id="priority">
+
+          <option value="High">High Priority</option>
+
+          <option value="Medium">Medium Priority</option>
+
+          <option value="Low">Low Priority</option>
+
+        </select>
+
+        <button type="submit">
+          <i class="fa-solid fa-plus"></i>
+          Add Task
+        </button>
+
+      </form>
+
+    </section>
+
+    <!-- TASK LIST -->
+
+    <section class="task-list-container">
+
+      <div class="task-top">
+
+        <h2>Task List</h2>
+
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search tasks..."
+        >
+
+      </div>
+
+      <div id="taskList" class="task-list">
+
+      </div>
+
+    </section>
+
+    <!-- NOTES SECTION -->
+
+    <section class="notes-container">
+
+      <h2>Daily Notes</h2>
+
+      <textarea
+        id="dailyNotes"
+        placeholder="Write learnings, bugs, mentor feedback..."
+      ></textarea>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
 
 </body>
 </html>

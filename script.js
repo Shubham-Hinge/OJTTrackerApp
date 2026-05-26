@@ -1,1 +1,5 @@
-console.log("Smart OJT Tracker Started");
+const themeToggle = document.getElementById("themeToggle");
+
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("light-mode");
+});
