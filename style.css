@@ -183,6 +183,99 @@ body{
   gap:15px;
 }
 
+/* TASK CARD */
+
+.task-card{
+  background:#334155;
+  padding:20px;
+  border-radius:15px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  transition:0.3s;
+}
+
+.task-card:hover{
+  transform:translateY(-3px);
+}
+
+.task-info h3{
+  margin-bottom:10px;
+}
+
+.task-info p{
+  color:#cbd5e1;
+  margin:5px 0;
+}
+
+.priority{
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:bold;
+}
+
+.high{
+  background:#ef4444;
+}
+
+.medium{
+  background:#f59e0b;
+}
+
+.low{
+  background:#22c55e;
+}
+
+/* BUTTONS */
+
+.task-actions{
+  display:flex;
+  gap:10px;
+}
+
+.task-actions button{
+  border:none;
+  padding:10px 14px;
+  border-radius:10px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.complete-btn{
+  background:#22c55e;
+  color:white;
+}
+
+.edit-btn{
+  background:#3b82f6;
+  color:white;
+}
+
+.delete-btn{
+  background:#ef4444;
+  color:white;
+}
+
+.task-actions button:hover{
+  opacity:0.8;
+}
+
+/* COMPLETED TASK */
+
+.completed{
+  opacity:0.6;
+  text-decoration:line-through;
+}
+
+/* EMPTY STATE */
+
+#emptyState{
+  text-align:center;
+  padding:40px;
+  color:#94a3b8;
+}
+
 /* NOTES */
 
 .notes-container{
@@ -200,6 +293,31 @@ body{
   border-radius:10px;
   resize:none;
   outline:none;
+}
+
+/* TOAST */
+
+.toast{
+  position:fixed;
+  top:20px;
+  right:20px;
+  background:#38bdf8;
+  color:white;
+  padding:15px 20px;
+  border-radius:10px;
+  animation:slideIn 0.5s ease;
+}
+
+@keyframes slideIn{
+
+  from{
+    transform:translateX(100%);
+  }
+
+  to{
+    transform:translateX(0);
+  }
+
 }
 
 /* LIGHT MODE */
