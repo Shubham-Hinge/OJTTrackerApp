@@ -82,7 +82,7 @@ body{
   background:#38bdf8;
 }
 
-/* SUMMARY CARDS */
+/* SUMMARY SECTION */
 
 .summary-section{
   display:grid;
@@ -113,14 +113,21 @@ body{
   font-weight:bold;
 }
 
-/* FORM */
+/* COMMON CONTAINERS */
 
-.task-form-container{
+.task-form-container,
+.task-list-container,
+.notes-container,
+.chart-container,
+.filter-container,
+.export-section{
   background:#1e293b;
   padding:25px;
   border-radius:15px;
   margin-bottom:40px;
 }
+
+/* FORM */
 
 .task-form-container h2{
   margin-bottom:20px;
@@ -133,14 +140,16 @@ body{
 }
 
 #taskForm input,
-#taskForm select{
+#taskForm select,
+#filterCategory{
   padding:14px;
   border:none;
   border-radius:10px;
   outline:none;
 }
 
-#taskForm button{
+#taskForm button,
+#exportBtn{
   background:#38bdf8;
   color:white;
   border:none;
@@ -150,18 +159,19 @@ body{
   transition:0.3s;
 }
 
-#taskForm button:hover{
+#taskForm button:hover,
+#exportBtn:hover{
   background:#0ea5e9;
 }
 
-/* TASK LIST */
+/* FILTER */
 
-.task-list-container{
-  background:#1e293b;
-  padding:25px;
-  border-radius:15px;
-  margin-bottom:40px;
+.filter-container{
+  display:flex;
+  justify-content:flex-end;
 }
+
+/* TASK LIST */
 
 .task-top{
   display:flex;
@@ -208,6 +218,8 @@ body{
   margin:5px 0;
 }
 
+/* PRIORITY */
+
 .priority{
   padding:6px 12px;
   border-radius:20px;
@@ -217,17 +229,20 @@ body{
 
 .high{
   background:#ef4444;
+  color:white;
 }
 
 .medium{
   background:#f59e0b;
+  color:white;
 }
 
 .low{
   background:#22c55e;
+  color:white;
 }
 
-/* BUTTONS */
+/* TASK ACTION BUTTONS */
 
 .task-actions{
   display:flex;
@@ -278,12 +293,6 @@ body{
 
 /* NOTES */
 
-.notes-container{
-  background:#1e293b;
-  padding:25px;
-  border-radius:15px;
-}
-
 .notes-container textarea{
   width:100%;
   height:150px;
@@ -293,6 +302,14 @@ body{
   border-radius:10px;
   resize:none;
   outline:none;
+}
+
+/* CHART */
+
+.chart-container canvas{
+  max-width:400px;
+  margin:auto;
+  display:block;
 }
 
 /* TOAST */
@@ -306,16 +323,19 @@ body{
   padding:15px 20px;
   border-radius:10px;
   animation:slideIn 0.5s ease;
+  z-index:1000;
 }
 
 @keyframes slideIn{
 
   from{
     transform:translateX(100%);
+    opacity:0;
   }
 
   to{
     transform:translateX(0);
+    opacity:1;
   }
 
 }
@@ -334,9 +354,20 @@ body{
 .light-mode .task-form-container,
 .light-mode .task-list-container,
 .light-mode .notes-container,
-.light-mode .summary-card{
+.light-mode .summary-card,
+.light-mode .chart-container,
+.light-mode .filter-container,
+.light-mode .export-section{
   background:white;
   color:black;
+}
+
+.light-mode .task-card{
+  background:#e2e8f0;
+}
+
+.light-mode .task-info p{
+  color:#334155;
 }
 
 /* RESPONSIVE */
@@ -355,6 +386,74 @@ body{
     flex-direction:column;
     align-items:flex-start;
     gap:15px;
+  }
+
+  .task-card{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:15px;
+  }
+
+  .task-top{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:15px;
+  }
+
+  #searchInput{
+    width:100%;
+  }
+
+}
+/* DAY 5 VALIDATION STYLES */
+
+.error-input{
+  border:2px solid #ef4444 !important;
+}
+
+.success-input{
+  border:2px solid #22c55e !important;
+}
+
+/* BUTTON HOVER */
+
+.task-actions button:hover,
+#exportBtn:hover,
+#taskForm button:hover{
+  transform:scale(1.05);
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+  width:8px;
+}
+
+::-webkit-scrollbar-track{
+  background:#1e293b;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#38bdf8;
+  border-radius:10px;
+}
+
+/* TASK CARD ANIMATION */
+
+.task-card{
+  animation:fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn{
+
+  from{
+    opacity:0;
+    transform:translateY(10px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
   }
 
 }
