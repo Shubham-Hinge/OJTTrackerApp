@@ -1,36 +1,51 @@
 # Smart OJT Productivity Tracker
 
-A modern and responsive web application developed to manage daily OJT tasks, learning activities, mentor feedback, and productivity tracking.
+A modern and responsive productivity management web application developed for tracking OJT daily activities, tasks, mentor feedback, and productivity analytics.
 
-This project was developed as part of Week 1 OJT Developer Foundations training using HTML, CSS, JavaScript, Git, and Local Storage concepts.
+This project was developed as part of Week 1 OJT Developer Foundations training using:
+- HTML5
+- CSS3
+- JavaScript
+- Local Storage
+- Chart.js
+- Git & GitHub
 
 ---
 
 # Project Overview
 
 The Smart OJT Productivity Tracker helps students and trainees:
-- Track daily tasks
+- Track daily learning tasks
 - Monitor productivity
-- Manage learning progress
-- Organize mentor feedback
-- Improve task management
+- Manage mentor feedback
+- Organize notes
+- Visualize progress analytics
+- Export task reports
 
-The application is fully responsive and works across desktop, tablet, and mobile devices.
+The application is fully responsive and works on:
+- Desktop
+- Tablet
+- Mobile devices
 
 ---
 
-# Features Implemented (Till Day 3)
+# Features Implemented (Till Day 5)
 
-## Day 1 Features
+---
+
+# Day 1 Features
+
 - Project setup
 - GitHub repository creation
 - Folder structure setup
 - Git initialization
-- Basic HTML, CSS, JavaScript linking
+- HTML, CSS, JavaScript linking
+- VS Code environment setup
 
 ---
 
-## Day 2 Features
+# Day 2 Features
+
 - Responsive dashboard UI
 - Sidebar navigation
 - Summary cards
@@ -39,22 +54,53 @@ The application is fully responsive and works across desktop, tablet, and mobile
 - Notes section
 - Glassmorphism design
 - Dark mode functionality
-- Media Queries for responsiveness
+- Media Queries implementation
+- Mobile responsive layout
 
 ---
 
-## Day 3 Features
+# Day 3 Features
+
 - Add Task functionality
 - Delete Task functionality
 - Edit Task functionality
 - Complete Task functionality
 - Dynamic task rendering
-- Real-time dashboard updates
+- Dashboard updates
 - Productivity percentage calculation
 - Search/filter functionality
 - Empty-state UI
 - Toast notifications
 - Dynamic DOM manipulation
+
+---
+
+# Day 4 Features
+
+- Local Storage integration
+- Persistent task saving
+- Notes auto-save
+- Chart.js analytics dashboard
+- CSV export functionality
+- Category filtering
+- Doughnut productivity chart
+- Improved responsive UI
+- Data persistence after refresh
+
+---
+
+# Day 5 Features
+
+- Advanced form validation
+- Duplicate task prevention
+- Delete confirmation popup
+- Persistent dark mode
+- Created timestamp tracking
+- Enhanced toast notifications
+- Error handling improvements
+- Better user experience animations
+- Performance optimization
+- Improved LocalStorage handling
 
 ---
 
@@ -65,9 +111,10 @@ The application is fully responsive and works across desktop, tablet, and mobile
 | HTML5 | Structure |
 | CSS3 | Styling |
 | JavaScript | Functionality |
+| Local Storage | Data Persistence |
+| Chart.js | Analytics Dashboard |
 | Font Awesome | Icons |
 | Git & GitHub | Version Control |
-| Local Storage | Data Persistence (Upcoming) |
 
 ---
 
@@ -84,3 +131,8 @@ ojt-productivity-tracker/
 ├── assets/
 │   ├── screenshots/
 │   ├── icons/
+│   └── logo/
+│
+└── docs/
+    ├── weekly-report.md
+    └── error-log.md
