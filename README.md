@@ -6,7 +6,7 @@ This project was developed as part of Week 1 OJT Developer Foundations training 
 - HTML5
 - CSS3
 - JavaScript
-- Local Storage
+-MongoDB,Node.js and express.js
 - Chart.js
 - Git & GitHub
 
