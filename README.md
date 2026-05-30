@@ -111,7 +111,7 @@ The application is fully responsive and works on:
 | HTML5 | Structure |
 | CSS3 | Styling |
 | JavaScript | Functionality |
-| Local Storage | Data Persistence |
+|MongoD atlas | Data store |
 | Chart.js | Analytics Dashboard |
 | Font Awesome | Icons |
 | Git & GitHub | Version Control |
