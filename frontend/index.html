@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Smart OJT Tracker</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="logo">
+      <h2>OJT Tracker</h2>
+    </div>
+
+    <ul class="menu">
+
+      <li id="dashboardBtn" class="active">
+        <i class="fa-solid fa-house"></i>
+        Dashboard
+      </li>
+
+      <li id="tasksBtn">
+        <i class="fa-solid fa-list-check"></i>
+        Tasks
+      </li>
+
+      <li id="analyticsBtn">
+        <i class="fa-solid fa-chart-column"></i>
+        Analytics
+      </li>
+
+      <li id="notesBtn">
+        <i class="fa-solid fa-note-sticky"></i>
+        Notes
+      </li>
+
+      <li id="settingsBtn">
+        <i class="fa-solid fa-gear"></i>
+        Settings
+      </li>
+
+    </ul>
+
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <!-- HEADER -->
+    <header class="header">
+
+      <div>
+        <h1>Smart OJT Productivity Tracker</h1>
+        <p>Track your learning and daily OJT progress</p>
+      </div>
+
+      <button id="themeToggle">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+
+    </header>
+
+    <!-- DASHBOARD -->
+    <section class="summary-section" id="dashboardSection">
+
+      <div class="summary-card">
+        <h3>Total Tasks</h3>
+        <p id="totalTasks">0</p>
+      </div>
+
+      <div class="summary-card">
+        <h3>Completed</h3>
+        <p id="completedTasks">0</p>
+      </div>
+
+      <div class="summary-card">
+        <h3>Pending</h3>
+        <p id="pendingTasks">0</p>
+      </div>
+
+      <div class="summary-card">
+        <h3>Productivity</h3>
+        <p id="productivity">0%</p>
+      </div>
+
+    </section>
+
+    <!-- TASK FORM -->
+    <section class="task-form-container" id="taskSection">
+
+      <h2>Add New Task</h2>
+
+      <form id="taskForm">
+
+        <input
+          type="text"
+          id="taskTitle"
+          placeholder="Enter Task Title"
+          required
+        >
+
+        <select id="category">
+          <option value="Development">Development</option>
+          <option value="Testing">Testing</option>
+          <option value="Documentation">Documentation</option>
+          <option value="Learning">Learning</option>
+        </select>
+
+        <input type="date" id="dueDate">
+
+        <select id="priority">
+          <option value="High">High Priority</option>
+          <option value="Medium">Medium Priority</option>
+          <option value="Low">Low Priority</option>
+        </select>
+
+        <button type="submit">
+          <i class="fa-solid fa-plus"></i>
+          Add Task
+        </button>
+
+      </form>
+
+    </section>
+
+    <!-- FILTER -->
+    <section class="filter-container">
+
+      <select id="filterCategory">
+
+        <option value="All">All Categories</option>
+        <option value="Development">Development</option>
+        <option value="Testing">Testing</option>
+        <option value="Documentation">Documentation</option>
+        <option value="Learning">Learning</option>
+
+      </select>
+
+    </section>
+
+    <!-- TASK LIST -->
+    <section class="task-list-container">
+
+      <div class="task-top">
+
+        <h2>Task List</h2>
+
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search tasks..."
+        >
+
+      </div>
+
+      <div id="emptyState">
+
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/7486/7486740.png"
+          width="120"
+          alt="No Tasks"
+        >
+
+        <p>No tasks added yet</p>
+
+      </div>
+
+      <div id="taskList" class="task-list"></div>
+
+    </section>
+
+    <!-- ANALYTICS -->
+    <section class="chart-container" id="analyticsSection">
+
+      <h2>Task Analytics</h2>
+
+      <canvas id="taskChart"></canvas>
+
+    </section>
+
+    <!-- NOTES -->
+    <section class="notes-container" id="notesSection">
+
+      <h2>Daily Notes</h2>
+
+      <textarea
+        id="dailyNotes"
+        placeholder="Write learnings, bugs, mentor feedback..."
+      ></textarea>
+
+    </section>
+
+    <!-- SETTINGS -->
+    <section class="settings-container" id="settingsSection">
+
+      <h2>Settings</h2>
+
+      <div class="settings-card">
+
+        <p>Theme Settings</p>
+
+        <button id="themeToggleSettings">
+          Toggle Theme
+        </button>
+
+      </div>
+
+    </section>
+
+    <!-- EXPORT -->
+    <section class="export-section">
+
+      <button id="exportBtn">
+        <i class="fa-solid fa-download"></i>
+        Export Tasks CSV
+      </button>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

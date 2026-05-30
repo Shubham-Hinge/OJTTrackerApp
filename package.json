@@ -1,0 +1,10 @@
+{
+  "name": "ojt_tracker",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "node backend/server.js",
+    "start": "node backend/server.js",
+    "seed:admin": "node backend/seedAdmin.js"
+  }
+}
