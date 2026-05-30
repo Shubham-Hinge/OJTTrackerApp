@@ -123,7 +123,8 @@ The application is fully responsive and works on:
 ```bash
 ojt_tracker/ │ ├── frontend/ │ ├── index.html │ ├── style.css │ ├── script.js │ └── assets/ │ ├── backend/ │ ├── server.js │ ├── package.json │ ├── routes/ │ ├── models/ │ ├── middleware/ │ └── config/ │ ├── assests/ │ └── screenshots/ │ ├── package.json └── README.md
 
-nstallation
+#Installation
+
 1. Clone Repository
 git clone https://github.com/your-username/ojt-tracker.git
 2. Navigate to Project
@@ -159,57 +160,4 @@ Open:
 frontend/index.html
 
 or run using VS Code Live Server.
-
-API Endpoints
-Authentication
-Register User
-POST /api/auth/register
-Login User
-POST /api/auth/login
-Get User Profile
-GET /api/auth/profile
-
-Authorization Header:
-
-Bearer <JWT_TOKEN>
-Database Collections
-Users
-{
-  name,
-  email,
-  password,
-  role
-}
-Tasks
-{
-  title,
-  description,
-  status,
-  priority,
-  createdAt
-}
-Screenshots
-Login Page
-User Authentication
-Secure Access
-Dashboard
-Productivity Overview
-Task Statistics
-Analytics Charts
-Admin Panel
-User Monitoring
-Performance Tracking
-Future Enhancements
-Mobile Application
-Attendance Management
-Email Notifications
-Mentor Evaluation Module
-Export Reports (PDF/Excel)
-AI-Based Productivity Suggestions
-Cloud Deployment
-Project Objectives
-Digitalize OJT activity tracking.
-Improve trainee productivity.
-Reduce manual documentation.
-Provide real-time progress visibility.
-Enhance reporting and performance monitoring.
+ 
